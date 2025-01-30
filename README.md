@@ -10,11 +10,12 @@ I dati utilizzati provengono direttamente da Wikipedia, elaborati attraverso API
 
 ## Tecnologie e Librerie Utilizzate
 - **Python 3.x**
+- **Apache Spark** per la gestione di big data
 - **Pandas e NumPy** per la gestione dei dati
 - **NLTK e spaCy** per l'elaborazione del linguaggio naturale
 - **Scikit-learn** per la modellazione predittiva
 - **Matplotlib e Seaborn** per la visualizzazione dei dati
-- **Jupyter Notebook** per lo sviluppo e la documentazione
+- **Databricks** come piattaforma di sviluppo
 
 ## Struttura del Notebook
 1. **Introduzione al problema**
@@ -29,13 +30,17 @@ I dati utilizzati provengono direttamente da Wikipedia, elaborati attraverso API
 Il progetto ha permesso di sviluppare un sistema preliminare di categorizzazione automatica degli articoli di Wikipedia, con buoni risultati in termini di accuratezza e scalabilità. Ulteriori miglioramenti potrebbero includere l’integrazione con modelli di deep learning per affinare la classificazione.
 
 ## Esecuzione del Notebook
-1. Clonare il repository e installare le dipendenze:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   pip install -r requirements.txt
-   ```
-2. Aprire Jupyter Notebook ed eseguire le celle step-by-step.
+Poiché il notebook utilizza **Apache Spark** per l'elaborazione dei dati, non è sufficiente eseguire il notebook localmente senza un adeguato ambiente di esecuzione. È necessario predisporre un **cluster Spark** in locale o su cloud (es. **Databricks**, **AWS EMR**, **Google Dataproc**). Per l'esecuzione:
+
+1. **Se si utilizza Databricks**:
+   - Importare il notebook su Databricks
+   - Creare e configurare un cluster Spark
+   - Eseguire il notebook su Databricks
+
+2. **Se si esegue in locale**:
+   - Installare **Apache Spark** e PySpark
+   - Configurare un cluster Spark locale
+   - Eseguire il notebook tramite Apache Zeppelin
 
 ## Contatti e Contributi
 Se hai suggerimenti o vuoi contribuire al progetto, sentiti libero di aprire una issue o fare una pull request!
